@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <title>Кредитный калькулятор</title>
+</head>
+
+<body>
+    <ul>
+        <li>если клиенту нет 18 лет, то кредит он не получит</li>
+        <li>если клиенту от 18 до 21, то он может получить максимум 50000</li>
+        <li>если клиенту от 22 до 35, то он сможет получить максимум 400000</li>
+        <li>если клиенту от 36 до 65, то ему одобрят максимум 1000000</li>
+        <li>кредит могут выдавать суммами кратными 10000.</li>
+    </ul>
+
+    <script>
+
+
+        const userAgeInput = prompt('Введите свой возраст:');
+
+            if (userAgeInput === null || isNaN(parseInt(userAgeInput, 10)) || userAgeInput.trim() === "") {
+                alert('Возраст должен быть числом!');
+            } else {
+                let userAge = parseInt(userAgeInput.trim(), 10);
+                let maxAmount;
+                if (userAge < 18) {
+                    maxAmount = 0;
+                } else if (userAge <= 21) {
+                    maxAmount = 50000;
+                } else if (userAge <= 35) {
+                    maxAmount = 400000;
+                } else if (userAge <= 65) {
+                    maxAmount = 1000000;
+                }
+
+                if (userAge < 18) {
+                    alert('Мы не можем выдать вам кредит!');
+                } else {
+                    let userAmountInput = prompt(`Мы можем выдать вам кредит до ${maxAmount}. Введите желаемую сумму, кратную 1000:`);
+                    if (userAmountInput === null || isNaN(parseInt(userAmountInput, 10)) || userAmountInput.trim() === "") {
+                        alert("Похоже, вам кредит не нужен. Всего доброго!");
+                    } else {
+                        let userAmount = parseInt(userAmountInput.trim(), 10);
+                        if (userAmount <= maxAmount && userAmount % 1000 === 0) {
+                            alert(`Вы можете получить кредит на сумму ${userAmount}`);
+                        } else if (userAmount <= maxAmount) {
+                            alert(`Вы можете получить кредит на сумму ${Math.ceil(userAmount / 1000) * 1000}`);
+                        } else {
+                            alert(`Мы не можем выдать вам больше, чем ${maxAmount}`);
+                        }
+                    }
+                }
+            }
+
+       
+    </script>
+</body>
+
+</html>
