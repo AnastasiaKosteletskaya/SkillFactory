@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.gallery {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery__image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
