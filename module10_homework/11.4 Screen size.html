@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen size</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#screenSizeButton {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+#screenSizeButton:hover {
+    background-color: #0056b3;
+}
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const screenSizeButton = document.getElementById('screenSizeButton');
+
+            screenSizeButton.addEventListener('click', () => {
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+                alert(`Screen Width: ${width}px\nScreen Height: ${height}px`);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="screenSizeButton">Show Screen Size</button>
+
+</body>
+</html>
