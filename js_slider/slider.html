@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Slider</title>
+    <link rel="stylesheet" href="slider.css">
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="slider-content">
+            <div class="description">
+                <h2>COMPLETED PROJECTS</h2>
+                <p>Only a small part of the work performed by our company is presented on the site. For 14 years on in
+                    the construction market we have made happy more than 1000 families</p>
+                <div class="details">
+                    <p><strong>CITY:</strong> <span id="city">Rostov-on-Don Patriotic</span></p>
+                    <p><strong>APARTMENT AREA:</strong> <span id="area">93 m2</span></p>
+                    <p><strong>REPAIR TIME:</strong> <span id="time">3 months</span></p>
+                    <p><strong>REPAIR COST:</strong> <span id="cost">Upon request</span></p>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <span class="prev"><img src="img/prev.svg" alt="prev"></span>
+                <div class="dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <span class="next"><img src="img/next.svg" alt="next"></span>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="slider-navigation">
+                <a href="#" data-slide="0" class="nav-link active">ROSTOV-ON-DON, ADMIRAL</a>
+                <a href="#" data-slide="1" class="nav-link">SOCHI THIEVES</a>
+                <a href="#" data-slide="2" class="nav-link">ROSTOV-ON-DON PATRIOTIC</a>
+            </div>
+            <div class="slides">
+                <div class="slide"><img src="img/image1.png" alt="Image 1"></div>
+                <div class="slide"><img src="img/image2.png" alt="Image 2"></div>
+                <div class="slide"><img src="img/image3.png" alt="Image 3"></div>
+            </div>
+        </div>
+    </div>
+    <script src="slider.js"></script>
+</body>
+
+</html>
